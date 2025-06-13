@@ -12,52 +12,32 @@ Select ONE Additional
 [ no ] Feature 4 - Include prompt() to Get Info From User
 [ no ] Feature 5 - KeyPressed Feature
 -->
+
+<!DOCTYPE html>
 <html>
   <head>
-    <title>Snowflake Animation</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.js"></script>
-    <style>
-      body {
-        background-color: #a4d4ff;
-        font-family: arial;
-        text-align: center;
-      }
-      h1 {
-        color: #000111;
-        background-color: #408ec6;
-        padding: 10px;
-        border-radius: 10px;
-    
-      }
-    </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Unit 11 Project</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.6/processing.min.js"></script>
+    <style></style>
   </head>
+<p id="seasonText">Guess my favorite season!</p>
+<button onclick="location.reload()">Restart</button>
+<div class="footer">Made by Kate</div>
+<script>
+  var favorite = prompt("What’s your favorite season?");
+  document.getElementById("seasonText").innerText = "You chose: " + favorite;
+</script>
+
   <body>
-    <h1>❆ Welcome to  Snow  ❆</h1>
-    <script>
-      let snowX = [100, 120, 160, 200];
-      let snowY = [50, 70, 40, 20];
-      let snowSize = [30, 25, 20, 35];
-      let snowSpeed = [1, 2, 1.5, 2.5];
-      let snowOpacity = [255, 230, 200, 180];
-
-      function draw() {
-        background(164, 212, 255);
-
-
-        fill(255);
-        rect(-10, 300, 610, 150);
-
- 
-        for (let i = 0; i < snowX.length; i+) {
-          drawSnowflake(i);
-          snowY += snowSpeed;
-
-          if (snow> height) {
-            snowY = 0;
-            snowX = random(0, width);
-          }
-     
-    </script>
+    <div class="container">
+      <div>
+        <h2 id="end">🍂🌼🌞⛄ | My Favorite Season</h2>
+        <canvas id="myCanvas" data-processing-sources="myP5Code.pde"> </canvas>
+      </div>
+    </div>
   </body>
 </html>
 
