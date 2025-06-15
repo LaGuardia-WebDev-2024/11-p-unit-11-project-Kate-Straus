@@ -23,6 +23,13 @@ Select ONE Additional
     <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.6/processing.min.js"></script>
     <style></style>
   </head>
+<p id="seasonText">Guess my favorite season!</p>
+<button onclick="location.reload()">Restart</button>
+<div class="footer">Made by Kate</div>
+<script>
+  var favorite = prompt("What’s your favorite season?");
+  document.getElementById("seasonText").innerText = "You chose: " + favorite;
+</script>
 
   <body>
     <div class="container">
